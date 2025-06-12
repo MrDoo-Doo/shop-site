@@ -1,0 +1,353 @@
+//  HEADER
+.top {
+    height: 735px;
+    background-color: rgb(196, 196, 196);
+    background-image: url(./img/main.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__title {
+        max-width: 792px;
+        font-weight: 600;
+        font-size: 64px;
+        line-height: 70px;
+        margin-top: 64px;
+        color: $color-header;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 32px;
+        color: $color-header;
+        margin-bottom: 16px;
+        margin-top: 16px;
+    }
+
+    &__link {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: $color-header;
+
+        &--dark {
+            color: #000;
+        }
+
+        &:hover {
+            text-decoration: none;
+            color: $color-text-add;
+        }
+    }
+}
+
+.header {
+    height: 76px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0.5px solid $color-header;
+
+    &__input {
+        font: inherit;
+        width: 288px;
+        height: 41px;
+        box-sizing: border-box;
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 20px;
+        background-color: rgb(0, 0, 0, 0.1); //transparent;
+        outline: none;
+        color: rgb(255, 255, 255);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0%;
+        text-align: left;
+        padding-left: 32px;
+        padding-right: 32px;
+
+        &::placeholder {
+            color: $color-header;
+        }
+    }
+
+    &__logo {
+        text-decoration: none;
+        height: 44px;
+        display: flex;
+        align-content: flex-end;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
+}
+
+.menu {
+    position: relative;
+    display: flex;
+    gap: 32px;
+
+    &__link {
+        color: rgb(255, 255, 255);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0%;
+        text-align: left;
+        list-style-type: none;
+        text-decoration: none;
+
+        &:hover {
+            //text-decoration: underline;
+            font-weight: 600;
+        }
+    }
+
+    &-mobile {
+        display: none;
+    }
+}
+
+.cart-preview {
+    display: none;
+    position: absolute;
+    width: 477px;
+    padding: 40px 48px;
+    right: 0;
+    top: 38px;
+    background-color: #FFFFFF;
+
+    &:target {
+        display: block;
+    }
+}
+
+//  Мебель для...
+.for {
+    margin-top: 64px;
+    margin-bottom: 64px;
+}
+
+.for-content {
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 32px;
+
+    &__item {
+        grid-column: span 4;
+        height: 415px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 34px;
+        line-height: 42px;
+        color: $color-header;
+        display: flex;
+        text-decoration: none;
+        justify-content: center;
+        align-items: center;
+        background-size: cover;
+        background-position: center;
+        text-shadow: 0 0 5px black;
+
+        &--big {
+            grid-column: span 6;
+        }
+
+        &--1 {
+            background-image: url(./img/meb1.jpg);
+        }
+
+        &--2 {
+            background-image: url(./img/meb2.jpg);
+        }
+
+        &--3 {
+            background-image: url(./img/meb3.jpg);
+        }
+
+        &--4 {
+            background-image: url(./img/meb4.jpg);
+        }
+
+        &--5 {
+            background-image: url(./img/meb5.jpg);
+        }
+    }
+}
+
+//  Товары
+.product-box {
+    margin-bottom: 64px;
+
+    &__header {
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 59px;
+        color: $color-text;
+        margin-bottom: 32px;
+    }
+}
+
+.product-content {
+    display: flex;
+    row-gap: 48px;
+    column-gap: 32px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+}
+
+.product {
+    width: 378px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+
+    &__name {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29px;
+        color: $color-text;
+        margin-top: 10px;
+        margin-bottom: 8px;
+    }
+
+    &__phrase {
+        font-size: 14px;
+        line-height: 17px;
+        color: $color-text-add;
+        margin-bottom: 12px;
+    }
+
+    &__price {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29px;
+        color: $color-price;
+        margin-right: 32px;
+        margin-top: 5px;
+
+        &--old {
+            text-decoration-line: line-through;
+            color: $color-text-add;
+        }
+    }
+}
+
+//  FOOTER
+.footer {
+    background-color: #F7F6F6;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 32px;
+    padding-bottom: 58px;
+
+    &__content {
+        display: flex;
+        column-gap: 192px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 40px;
+    }
+
+    &__info {
+        display: flex;
+        column-gap: 129px;
+        flex-wrap: wrap;
+        row-gap: 40px;
+    }
+
+    &__product {
+        flex-direction: column;
+    }
+
+    &__product-tittle {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29px;
+        color: $color-text;
+    }
+
+    &__product-link {
+        display: block;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: $color-text-add;
+        text-decoration: none;
+        margin-top: 12px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__icon {
+        gap: 20px;
+        display: flex;
+        margin-top: 12px;
+    }
+
+    &__icon-svg:hover &__icon-path {
+        fill: #000000;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        color: $color-text;
+    }
+
+    &__form-email {
+        font: inherit;
+        width: 260px;
+        height: 40px;
+        background: $color-header;
+        border: 1px solid #C4C4C4;
+        box-sizing: border-box;
+        border-radius: 16px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        color: #C4C4C4;
+        padding-left: 17px;
+        padding-right: 17px;
+    }
+
+    &__form-button {
+        font: inherit;
+        background: rgba(222, 215, 215, 0.41);
+        border: 1px solid $color-header;
+        box-sizing: border-box;
+        border-radius: 16px;
+        width: 260px;
+        height: 40px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        color: $color-text;
+
+        &:hover {
+            color: $color-header;
+            background: #000000;
+        }
+    }
+
+    &__logo {
+        width: 198px;
+        height: 44px;
+        display: flex;
+        align-content: flex-end;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 40px;
+        margin-right: 40px;
+    }
+}
