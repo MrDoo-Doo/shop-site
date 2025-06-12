@@ -123,8 +123,6 @@
 .fieldset-box {
     display: flex;
     justify-content: space-between;
-    // height: 392px;
-    //  margin-bottom: 36px;
 }
 
 //  Checkbox
@@ -292,9 +290,6 @@ input[type="radio"]:checked+label:after {
     height: 10px;
     overflow: hidden;
     outline: none;
-
-    // &--min {}
-    // &--max {}
 }
 
 .range__slider {
